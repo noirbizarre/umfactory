@@ -1,0 +1,2 @@
+# umfactory
+Factories for uMongo
