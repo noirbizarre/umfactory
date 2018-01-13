@@ -1,4 +1,9 @@
 version: "2"
+plugins:
+  fixme:
+    enabled: true
+    issue_override:
+      severity: info
 exclude_patterns:
 - setup.py
 - tasks.py
