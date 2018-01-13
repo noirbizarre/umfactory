@@ -48,17 +48,3 @@ async def test_with_params():
     assert isinstance(person.name, str)
     assert person.age == 5
     assert person.surname == 'fake'
-
-#
-# async def test_me_require_auth(cli):
-#     resp = await cli.get('/api/1/me')
-#     assert resp.status == 401
-#
-#
-# @pytest.mark.authenticated
-# async def test_me(cli):
-#     resp = await cli.get('/api/1/me')
-#     assert resp.status == 200
-#     data = await resp.json()
-#     assert data['first_name'] == cli.user.first_name
-#     assert data['last_name'] == cli.user.last_name

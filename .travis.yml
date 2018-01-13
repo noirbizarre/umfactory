@@ -15,7 +15,7 @@ before_script:
   - ./cc-test-reporter before-build
 script:
   - inv qa cover --report
-after_script:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 after_success:
   - codecov --file=reports/coverage.xml
+  - ./cc-test-reporter format-coverage --input-type coverage.py reports/coverage.xml
+  - ./cc-test-reporter upload-coverage
