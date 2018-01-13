@@ -3,5 +3,5 @@ __description__ = 'Factories for umongo'
 
 try:
     from .core import Factory  # noqa
-except ImportError:
+except ImportError:  # pragma: nocover
     pass

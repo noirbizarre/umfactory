@@ -7,7 +7,7 @@ python:
 services:
   - mongodb
 install:
-  - pip install -r requirements/develop.pip codecov
+  - pip install -r requirements/develop.pip
 before_script:
   # Install codeclimate
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -16,6 +16,5 @@ before_script:
 script:
   - inv qa cover --report
 after_success:
-  - codecov --file=reports/coverage.xml
   - ./cc-test-reporter format-coverage --input-type coverage.py reports/coverage.xml
   - ./cc-test-reporter upload-coverage
