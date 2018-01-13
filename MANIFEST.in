@@ -1,0 +1,2 @@
+include README.md CHANGELOG.md LICENSE MANIFEST.in
+recursive-include requirements *.pip
